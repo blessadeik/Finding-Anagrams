@@ -17,7 +17,7 @@
         
 #     else:
 #         print ("False")
-class Solution:
+class FindingAnagrams:
     def find_anagram(self, word: str, anagram: str) -> list[int]:
         if len(word) > len(anagram): return []
         anagramCount, wordCount = {}, {}
@@ -35,5 +35,8 @@ class Solution:
                 wordCount.pop(word[l])
             l += 1
             if wordCount == anagramCount:
+                print ("True")
+            else:
+                print ("False")
                 result.append(l)
         return result
